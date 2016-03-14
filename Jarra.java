@@ -11,9 +11,12 @@
 		this.capacidad=capacidadInicial;
 	}
 //  metodos
-              1
-              2
-              3
+      // programador 1: Fran
+	public int capacidad(){
+    return this.capacidad;
+     	}
+             
+              
 
    public void metodoComunitario(){ 
 // Comentario incluido para pruebas 
