@@ -11,11 +11,18 @@
 		this.capacidad=capacidadInicial;
 	}
 //  metodos
-              1
-              2
-              3
+              
+              
+// metodo por Omar Serrano
+              public void llenaDesde(Jarra j){
+          		while((this.cantidad<this.capacidad)&&(j.cantidad>0)){
+          			this.cantidad++;
+          			j.cantidad--;
+          		} 
+
 
    public void metodoComunitario(){ 
 // Comentario incluido para pruebas 
            System.out.println("Aqui escribimos todos");
          }
+}
