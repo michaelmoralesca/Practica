@@ -12,10 +12,14 @@
 	}
 //  metodos
               1
-              2
+    //Programador 2: Michael Morales
+    public void llena(){
+		this.cantidad=this.capacidad;
+	}
+
               3
 
-   public void metodoComunitario(){ 
-// Comentario incluido para pruebas 
+   public void metodoComunitario(){
+// Comentario incluido para pruebas
            System.out.println("Aqui escribimos todos");
          }
