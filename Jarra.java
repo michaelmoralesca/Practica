@@ -12,11 +12,15 @@
 	}
 //  metodos
       // programador 1: Fran
+	// primer método
 	public int capacidad(){
     return this.capacidad;
      	}
-             
-              
+     //segundo método
+	public int cantidad(){
+		return this.cantidad;
+	}
+
 
    public void metodoComunitario(){ 
 // Comentario incluido para pruebas 
