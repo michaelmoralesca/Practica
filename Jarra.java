@@ -11,13 +11,17 @@
 		this.capacidad=capacidadInicial;
 	}
 //  metodos
-              1
+
     //Programador 2: Michael Morales
+    //Metodo para llenar las jarras
     public void llena(){
 		this.cantidad=this.capacidad;
 	}
+    //Metodo para vaciar las jarras
+    public void vacia(){
+		this.cantidad=0;
+	}
 
-              3
 
    public void metodoComunitario(){
 // Comentario incluido para pruebas
