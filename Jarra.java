@@ -11,6 +11,19 @@
 		this.capacidad=capacidadInicial;
 	}
 //  metodos
+              
+              
+// metodo por Omar Serrano
+              public void llenaDesde(Jarra j){
+          		while((this.cantidad<this.capacidad)&&(j.cantidad>0)){
+          			this.cantidad++;
+          			j.cantidad--;
+          		} 
+          		public String toString(){
+          			return ("("+this.capacidad+","+this.cantidad+")");
+          		}
+
+
 
     //Programador 2: Michael Morales
     //Metodo para llenar las jarras
@@ -27,3 +40,4 @@
 // Comentario incluido para pruebas
            System.out.println("Aqui escribimos todos");
          }
+}
