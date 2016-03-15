@@ -1,0 +1,83 @@
+##PRIMERO
+##en mi caso yo solo podia ver el branch Michael y Master ya que estaba en local
+##para poder hacer merge con las branch Omar por ejemplo, hay que ejecutar lo siguiente:
+
+$ git branch --track Omar origin/Omar
+
+##Esto crearia una copia del branch Omar remoto en local
+
+##Al hacer merge con master salta el siguiente error:
+
+$ git merge Omar
+Auto-merging Jarra.java
+CONFLICT (content): Merge conflict in Jarra.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+##Si se comprueba el status:
+
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   Jarra.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+
+
+##Ambos ficheros Jarra.java estan modificados y generan conflictos para hacer el merge de forma automatica,
+##la solucion esta en revisar el fichero y corregirlo de manera manual para luego hacer el merge
+
+##Las lineas que generan problemas se encuentran encerradas de la siguiente manera:
+
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> NombreDeLaRama
+
+##Da error porque hemos modificado la misma linea todos, si recuerdan "metodo 1, 2 y 3" estaban en lineas seguidas, git no sabe
+##con cual linea quedarse por eso no deja hacer el merge de forma automatica
+
+$ git merge Omar
+error: merge is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+##He abierto el fichero Jarra.java, corregido el error (mover un poco los metodos y remover "<<< === >>>") y lo he guardado, luego:
+
+$ git add Jarra.java
+
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        modified:   Jarra.java
+
+##Dice: "use "git commit" to conclude merge", asi que:
+
+$ git commit -m "Merge entre branch Omar y Master"
+[master fd02bc4] Merge entre branch Omar y Master
+
+
+##Luego un simple push al remoto
+
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 496 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/michaelmoralesca/Practica.git
+   afa7761..fd02bc4  master -> master
