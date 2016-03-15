@@ -11,17 +11,20 @@
 		this.capacidad=capacidadInicial;
 	}
 //  metodos
-              
-              
-// metodo por Omar Serrano
-              public void llenaDesde(Jarra j){
-          		while((this.cantidad<this.capacidad)&&(j.cantidad>0)){
-          			this.cantidad++;
-          			j.cantidad--;
-          		} 
-          		public String toString(){
-          			return ("("+this.capacidad+","+this.cantidad+")");
-          		}
+
+    
+
+	// programador 1: Fran
+	// primer método
+	public int capacidad(){
+    return this.capacidad;
+     	}
+     //segundo método
+	public int cantidad(){
+		return this.cantidad;
+	}
+
+
 
 
 
@@ -35,6 +38,18 @@
 		this.cantidad=0;
 	}
 
+
+              
+              
+	// Programador 3: Omar Serrano
+              public void llenaDesde(Jarra j){
+          		while((this.cantidad<this.capacidad)&&(j.cantidad>0)){
+          			this.cantidad++;
+          			j.cantidad--;
+          		} 
+          		public String toString(){
+          			return ("("+this.capacidad+","+this.cantidad+")");
+          		}
 
    public void metodoComunitario(){
 // Comentario incluido para pruebas
